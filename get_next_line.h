@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:20:14 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/26 09:56:02 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/02/28 12:13:16 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@
 #  define BUFFER_SIZE 1
 # endif
 
+//get_next_line.c
 char	*get_next_line(int fd);
 
+//get_next_line_utils
+int		ft_strlen(int char *s);
+char	ft_strjoin(char *s1, char *s2);
+char	ft_buffer_clean(char *buf);
 
 #endif

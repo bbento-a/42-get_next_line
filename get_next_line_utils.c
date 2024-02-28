@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/28 12:14:29 by bbento-a         ###   ########.fr       */
+/*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
+/*   Updated: 2024/02/28 12:13:28 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*get_next_line(int fd)
+int		ft_strlen(char *s)
 {
-	static char	buffer [BUFFER_SIZE + 1];
-	char		*line;
+	int	i;
 
-	if (!fd || read (fd, 0, 0) || BUFFER_SIZE < 1)
-	{
-		ft_buffer_clean(buffer);
-		return (NULL);
-	}
-	line = NULL;
-	
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0' || s[i] != '\n')
+		i++;
+	if (s[i] == '\n')
+		i++;
+	return(i);
 }
+
+char	*ft_strjoin(char *s1, char *s2)
+{}
+
+char	*ft_buffer_clean(char *buf)
+{}
