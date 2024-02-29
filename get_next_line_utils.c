@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/29 12:42:20 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/02/29 19:58:31 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,44 @@ size_t	ft_strlen(char *s)
 	return(i);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
-{}
+//MISSING WHILE LOOP FOR BUFFER PART (s2)
 
-char	*ft_buffer_clean(char *buf)
-{}
+char	*ft_strjoin(char *s1, char *s2)
+{
+	int i;
+	
+	i = 0;
+	res = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!res)
+		return(NULL);
+	while (s1[i] != '\0')
+	{
+		res[i] = s1[i];
+		i++;
+	}
+	free(s1);
+	while (s2)
+	{
+		res[i]
+	}
+}
+
+int	*ft_buffer_clean(char *buff)
+{
+	int i;
+	int	j;
+	int	nl;
+
+	i = 0;
+	j = 0;
+	nl = 0;
+	while (buff[0] != '\0')
+	{
+		if (nl)
+			buff[j++] = buff[i];
+		if (buff[i] == '\n')
+			nl = 1;
+		buff[i++] = '\0';
+	}
+	return(nl);
+}
