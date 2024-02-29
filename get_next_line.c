@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/28 12:14:29 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:34:31 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,9 @@ char	*get_next_line(int fd)
 		return (NULL);
 	}
 	line = NULL;
-	
+	while ( || read (fd, buffer, BUFFER_SIZE) > 0)
+	{
+
+	}
+	return (line);
 }

@@ -6,20 +6,20 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/28 12:13:28 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:42:20 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
 		return (0);
-	while (s[i] != '\0' || s[i] != '\n')
+	while (s[i] != '\0' && s[i] != '\n')
 		i++;
 	if (s[i] == '\n')
 		i++;

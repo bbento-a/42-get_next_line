@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:20:14 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/28 12:13:16 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:43:04 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 # include <fcntl.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 3
 # endif
 
 //get_next_line.c
 char	*get_next_line(int fd);
 
 //get_next_line_utils
-int		ft_strlen(int char *s);
+size_t	ft_strlen(char *s);
 char	ft_strjoin(char *s1, char *s2);
 char	ft_buffer_clean(char *buf);
 
