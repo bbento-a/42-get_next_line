@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/02/29 19:58:31 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:53:01 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,37 @@ size_t	ft_strlen(char *s)
 		i++;
 	if (s[i] == '\n')
 		i++;
-	return(i);
+	return (i);
 }
-
-//MISSING WHILE LOOP FOR BUFFER PART (s2)
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	int i;
-	
+	char	*res;
+	int		i;
+
 	i = 0;
 	res = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!res)
-		return(NULL);
-	while (s1[i] != '\0')
+		return (NULL);
+	while (s1 && s1[i] != '\0')
 	{
 		res[i] = s1[i];
 		i++;
 	}
 	free(s1);
-	while (s2)
+	while (*s2)
 	{
-		res[i]
+		res[i++] = *s2;
+		if (*s2++ == '\n')
+			break ;
 	}
+	res[i] = '\0';
+	return (res);
 }
 
-int	*ft_buffer_clean(char *buff)
+int	ft_buffer_clean(char *buff)
 {
-	int i;
+	int	i;
 	int	j;
 	int	nl;
 
@@ -65,5 +68,5 @@ int	*ft_buffer_clean(char *buff)
 			nl = 1;
 		buff[i++] = '\0';
 	}
-	return(nl);
+	return (nl);
 }
