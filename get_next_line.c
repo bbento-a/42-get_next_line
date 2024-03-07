@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/04 13:55:10 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/05 19:19:42 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ char	*get_next_line(int fd)
 {
 	static char	buffer [BUFFER_SIZE + 1];
 	char		*line;
+	int			i;
 
-	if (!fd || read (fd, 0, 0) || BUFFER_SIZE < 1)
+	i = 0;
+	if (!fd || read (fd, 0, 0) < 0 || BUFFER_SIZE < 1)
 	{
-		ft_buffer_clean(buffer);
+		while (buffer[i])
+			buffer[i++] = 0;
 		return (NULL);
 	}
 	line = NULL;
-	while (*buffer || read (fd, buffer, BUFFER_SIZE) > 0)
+	while (buffer[0] || read (fd, buffer, BUFFER_SIZE) > 0)
 	{
 		line = ft_strjoin(line, buffer);
 		if (ft_buffer_clean(buffer))
