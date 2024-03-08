@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/08 16:23:28 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/08 16:23:14 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*get_next_line(int fd)
 {
-	static char	buffer [BUFFER_SIZE + 1];
+	static char	buffer[BUFFER_SIZE + 1];
 	char		*line;
 	int			i;
 
@@ -37,9 +37,9 @@ char	*get_next_line(int fd)
 /*
 int	main(void)
 {
-	int		fd;
-	int		i;
-	char	*line;
+	int fd;
+	int	i;
+	char *line;
 
 	fd = open("test_files/test.txt", O_RDONLY);
 	i = 1;
@@ -51,6 +51,6 @@ int	main(void)
 		line = get_next_line(fd);
 	}
 	close(fd);
-	return (0);
+	return(0);
 }
 */
