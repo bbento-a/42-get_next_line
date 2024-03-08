@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/04 13:53:01 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/08 15:34:44 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_buffer_clean(char *buff)
 	i = 0;
 	j = 0;
 	nl = 0;
-	while (buff[0] != '\0')
+	while (buff[i] != '\0')
 	{
 		if (nl)
 			buff[j++] = buff[i];
