@@ -6,11 +6,11 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:14:25 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/08 16:24:27 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:41:18 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(char *s)
 {

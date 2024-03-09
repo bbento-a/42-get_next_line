@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:20:14 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/04 12:33:09 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:57:07 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 //get_next_line.c
 char	*get_next_line(int fd);
 
-//get_next_line_utils
+//get_next_line_utils.c
 size_t	ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 int		ft_buffer_clean(char *buf);
