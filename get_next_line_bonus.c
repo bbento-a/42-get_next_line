@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/09 09:48:20 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/11 14:39:35 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ char	*get_next_line(int fd)
 	i = 0;
 	if (fd >= FOPEN_MAX)
 		return (NULL);
-	if (!fd || read (fd, 0, 0) < 0 || BUFFER_SIZE < 1)
+	if (!fd || read(fd, 0, 0) < 0 || BUFFER_SIZE < 1)
 	{
 		while (buffer[fd][i])
 			buffer[fd][i++] = 0;
 		return (NULL);
 	}
 	line = NULL;
-	while (buffer[fd][0] || read (fd, buffer[fd], BUFFER_SIZE) > 0)
+	while (buffer[fd][0] || read(fd, buffer[fd], BUFFER_SIZE) > 0)
 	{
 		line = ft_strjoin(line, buffer[fd]);
 		if (ft_buffer_clean(buffer[fd]))
@@ -76,5 +76,4 @@ int	main(void)
 		i++;
     }
     return (0);
-}
-*/
+}*/
