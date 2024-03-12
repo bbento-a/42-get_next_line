@@ -6,7 +6,7 @@
 /*   By: bbento-a <bbento-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:27:18 by bbento-a          #+#    #+#             */
-/*   Updated: 2024/03/11 14:38:59 by bbento-a         ###   ########.fr       */
+/*   Updated: 2024/03/12 10:27:21 by bbento-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	int			i;
 
 	i = 0;
-	if (!fd || read(fd, 0, 0) < 0 || BUFFER_SIZE < 1)
+	if (fd < 0 || read(fd, 0, 0) < 0 || BUFFER_SIZE < 1)
 	{
 		while (buffer[i])
 			buffer[i++] = '\0';
@@ -41,7 +41,7 @@ int	main(void)
 	int		i;
 	char	*line;
 
-	fd = open("test_files/test.txt", O_RDONLY);
+	fd = 0;
 	i = 1;
 	line = get_next_line(fd);
 	while (line != NULL)
@@ -50,6 +50,8 @@ int	main(void)
 		free(line);
 		line = get_next_line(fd);
 	}
+	if (line)
+		free(line);
 	close(fd);
 	return (0);
 }
